@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>QS</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="warp">
+    <header class="container navbar-fixed-top header">
+        <div class="col-md-12">
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <nav class="main-navigation">
+                <div class="navbar-header">
+                    <button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="false">
+                        <img src="images/tips.png" alt="tips" class="hidetips"/>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="collapseOne">
+                    <ul class="menu">
+                        <li role="presentation">
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">量化学院</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="profile.html">产品</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="help.html">帮助</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="aboutus.html">关于</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" id="accountOpen">马上开户</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="profile clearfix secondBg">
+        <div class="profile_bg">
+            <img src="images/profilebg.jpg" alt="bg">
+        </div>
+        <div class="profile_text">
+            <h2 class="profiletitle">麒谋股票：自主研发、全平台覆盖的交易软件</h2>
+        </div>
+        <div class="profile_img container">
+            <img src="images/client-img.png" alt="pro">
+            <div class="btn-box">
+                <a href="javascript:;">立刻使用</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footleft col-md-7">
+                <ul class="clearfix">
+                    <li><a href="javascript:;">关于我们</a></li>
+                    <li><a href="javascript:;">加入我们</a></li>
+                    <li><a href="javascript:;">隐私声明</a></li>
+                    <li><a href="javascript:;">商务合作</a></li>
+                </ul>
+                <p>所有投资都存在风险。任何一支证券或金融产品的历史数据都不能保证其未来的表现及回报。
+                    虽然投资多样化可以帮助分散风险，但是并不能在市场低迷时确保您获益或防止您损失。投资证券或
+                    金融产品总会存在潜在的亏损可能。投资者在进行投资前需考虑自身的投资目标及风险承受能力。
+                </p>
+                <p>进行交易之前，客户敬请阅读在我们警告和声明网页上的相关风险透露声明。</p>
+                <p>© 2016 老虎证券   京ICP备14038179号</p>
+            </div>
+            <div class="footright col-md-5">
+                <!--预留-->
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+    $(function(){
+        function getLeft(ele){
+            var win = $(window).width();
+            var left = win/2 - (ele.width()/2);
+            ele.css('left',left);
+        }
+        function setleft(){
+            getLeft($('.profile_text h2'));
+            getLeft($('.profile_img'));
+        }
+        $(window).resize(function(){
+            setleft();
+        });
+        setleft();
+        $('.profile_img').animate({
+            top: 250
+        });
+        $('.profile_text h2').animate({
+            top: 100
+        })
+    })
+</script>
+</body>
+</html>
