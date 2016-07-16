@@ -298,6 +298,7 @@
 			// remove the loading DOM element
 			slider.loader.remove();
 			// set the left / top position of "el"
+
 			setSlidePosition();
 			// if "vertical" mode, always use adaptiveHeight to prevent odd behavior
 			if (slider.settings.mode == 'vertical') slider.settings.adaptiveHeight = true;

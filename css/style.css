@@ -7,17 +7,21 @@ li{
 a,a:visited{
     text-decoration: none;
 }
-
 @media (max-width: 780px){
-    .section1 h2,.section1 h3{
+    .section1 .textMax{
         font-size: 30px;
     }
     .profile_text .profiletitle{
         font-size: 25px;
     }
     .profile_img img{
-        width: 570px ;
+         width: 570px ;
+     }
+    .section1 .bannerStyle{
+        min-width: 300px;
+        min-height: 400px;
     }
+
 }
 @media (max-width: 380px){
     .profile_text .profiletitle{
@@ -26,7 +30,17 @@ a,a:visited{
     .profile_img img{
         width: 90% ;
     }
+    .profile{
+        margin-bottom: 10px;
+    }
 }
+
+.section3 h2,.section4 h2,.section5 h2,.section7 h2,.versionUp h2{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.4
+}
+
 
 .header{
     width: 100%;
@@ -69,16 +83,20 @@ a,a:visited{
     color: #ffffff;
 }
 .main-navigation #accountOpen{
-    background: #FFE100; color: #000000; font-weight: 700;
+    background: #F47126; color: #000000; font-weight: 700;
 }
 .hidetips{
     height: 30px;
 }
 
+
 /*section1*/
 .section1{
     padding: 0 0 20px 0 ;
     background: #f3f3f3;
+}
+.section1 img{
+    width: 100%;
 }
 
 .box {
@@ -135,7 +153,7 @@ a,a:visited{
 .text{
     font-size: 12px;
     line-height: 1.5;
-    color: #535353;
+    /*color: #535353;*/
 }
 /*section3*/
 .section3{
@@ -146,11 +164,7 @@ a,a:visited{
     max-width: 100%;
     margin: 0 auto;
 }
-.section3,.section4,.section5,.section7>h2{
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.4
-}
+
 .section3 .text-box{
     float: left;
 }
@@ -171,7 +185,7 @@ a,a:visited{
     text-align: center;
 }
 .section3 .btn-box a:hover{
-    background-color: #FFE100;
+    background-color: #F47126;
 }
 a,a:hover{
     text-decoration: none;
@@ -179,8 +193,9 @@ a,a:hover{
 }
 /*section4*/
 .section4{
-    background-color: #FFE100;
+    background-color: #F47126;
     padding: 50px 0;
+    color: #ffffff;
 }
 .section4 .mapIcon{
     margin: 0 auto;
@@ -205,18 +220,20 @@ a,a:hover{
 }
 .section5 li{
     text-align: center;
+
 }
-.section5 li img{
-    width: 144px;
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
+.section5 li span{
+    background: url("../images/imgsprite.png");
+    display: inline-block;
+    max-width: 100%
 }
+
 /*section6*/
 .section6{
     background: url("../images/joinus.jpg") no-repeat;
     background-size: 100%;
     padding: 100px 0;
+    min-height: 500px;
 }
 .section6 .join{
     width: 100%;
@@ -238,8 +255,8 @@ a,a:hover{
     padding: 60px 0;
 }
 .section6 .joinbtn a{
-    border-color: #FFE100;
-    color: #FFE100;
+    border-color: #ffffff;
+    color: #ffffff;
 }
 .section6 .investor{
     margin-top: 50px;
@@ -269,7 +286,7 @@ a,a:hover{
 
 /*footer*/
 .footer{
-    background: #FFE100; padding: 50px 0 70px 0;
+    background: #F47126; padding: 50px 0 70px 0; color: #ffffff;
 }
 .footer ul{
     padding: 0;
@@ -281,7 +298,7 @@ a,a:hover{
     font-weight: 700; font-size: 18px;
 }
 .footer p{
-    color: #535353; line-height: 1.5; font-size: 13px; padding: 10px 0;
+    line-height: 1.5; font-size: 13px; padding: 10px 0;
 }
 .footer .footleft{
     float: left;
@@ -400,19 +417,29 @@ a,a:hover{
 .dashborder{
     border-bottom: 1px dashed #d3d3d3;
 }
+.aboutus_box p{
+    line-height: 28px;
+}
+.aboutus_box div img{
+    height: 50px;
+}
+.aboutus_box .partner img{
+    float: left; margin-left: 5%;
+}
 .aboutus_box .team{
 }
 /*profile*/
-.profile{ }
+.profile{ position: relative; margin-bottom: 200px}
 .profile_bg{
     position: relative;
-    margin-bottom: 200px;
+    min-height: 600px;
 }
 .profile_bg img{
     width: 100%;
     min-height: 471px;
     display: block;
 }
+
 .profile_img {
     position: absolute;
     text-align: center;
@@ -420,4 +447,78 @@ a,a:hover{
 }
 .profiletitle{
     font-size: 35px;
+}
+.versionUp{
+    padding: 50px 0;
+}
+.versionUp p{
+    line-height: 2;
+}
+.versionUp h2{ text-align: center}
+.versionUp ul li{
+    line-height: 2;
+    list-style-type: disc;
+}
+/*joinus*/
+.joinus_con{
+    padding: 95px 0 80px 0;
+}
+.slidebar ul{
+    padding: 0; margin: 0;
+}
+.slidebar h2{
+    font-weight: 700;
+    font-size: 25px;
+}
+.slidebar ul li{
+    border-bottom: 1px solid #efefef;
+    line-height: 50px;
+    color: #666666;
+    cursor: pointer;
+}
+.slidecon div{
+    display: none;
+    padding: 20px;
+}
+.slidecon div h5{
+    font-weight: 700;
+}
+.slidecon div ul{
+    padding: 0; margin: 0;
+}
+.slidecon div ul li{
+    line-height: 30px;
+    color: #666666;
+}
+/*school*/
+.schoolView{
+    width: 100%;
+}
+.schoolView .topbg{
+    width: 100%;
+    min-height: 400px;
+    max-width: 100%;
+}
+.schoolView .topnav{
+    margin-top: 20px;
+}
+
+.schoolView .topnav a{
+    background: #5D71E4;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+}
+.schoolView .topnav .active,.schoolView .topnav a:hover{
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #5D71E4;
+}
+.schoolView .schoolcontain ul{
+    padding: 0; margin: 0;
+}
+.schoolView .schoolcontain ul li{
+    padding: 30px 0;
+    border-bottom: 1px solid #efefef
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <title>QS</title>
+    <title>智投学院-智投策略</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
     <script src="js/jquery.min.js"></script>
@@ -30,10 +30,10 @@
                             <a href="index.html">首页</a>
                         </li>
                         <li role="presentation">
-                            <a href="profile.html">产品</a>
+                        <a href="school.html">智投学院</a>
                         </li>
                         <li role="presentation">
-                            <a href="school_tab1.html">智投学院</a>
+                            <a href="profile.html">产品</a>
                         </li>
                         <li role="presentation">
                             <a href="help.html">帮助</a>
@@ -49,41 +49,32 @@
             </nav>
         </div>
     </header>
-    <section class="profile clearfix secondBg">
-        <div class="profile_bg">
-            <img src="images/profilebg.jpg" alt="bg">
-        </div>
-        <div class="profile_text">
-            <h2 class="profiletitle">宽策略智能投顾平台：自主研发、全平台覆盖的交易软件</h2>
-        </div>
-        <div class="profile_img container">
-            <img src="images/client-img.png" alt="pro">
-            <div class="btn-box">
-                <a href="http://www.quantsgeek.com/">立刻使用</a>
+    <section class="schoolView">
+        <img src="images/schoolbg.jpg" alt="sc" class="topbg">
+        <!--金融常识 量化理论 智投组合-->
+        <div class="container">
+            <div class="row topnav clearfix">
+                <a class="col-md-4 col-xs-4 " href="school_tab1.html">金融常识</a>
+                <a class="col-md-4 col-xs-4" href="school_tab2.html">量化理论</a>
+                <a class="col-md-4 col-xs-4 active" href="school_tab3.html">智投策略</a>
             </div>
+            <div class="row schoolcontain">
+                <ul>
+                    <li  class="clearfix">
+                        <div class="img_box col-md-4">
+                            <img src="images/blogs/tab1_1.jpg" alt="tab1_1">
+                        </div>
+                        <div class="con_box col-md-8">
+                            <h2>做空</h2>
+                            <p>美股和A股的区别之一就是美股支持做空，本期视频讲解做空，包含做空是什么、为什么做空可以赚钱、如何通过老虎股票APP做空以及做空的风险，帮助广大投资者更清晰的了解做空。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </section>
-    <section class="versionUp container">
-        <h2>1.0新版本于2016/9/1正式上线</h2>
-        <div class="col-md-12">
-            <p>
-                “宽策略全球智能财富管理系统”是一套定位于中国财富管理公司、第三方理财、私募对冲基金，全球配置基金等机构客户的全球智能财富管理平台，主要包括以下三方面功能。
-            </p>
-            <p>
-                <b>机器人投顾（RoboAdvisors）：</b>
-                包括从全球资产配置计算引擎，量化策略计算引擎，机器人策略回溯测试， 投资组合风险绩效与归因，量化策略程序化交易等全套操作的投资管理工具。
-            </p>
-            <p>
-                <b>公司业绩管理：</b>
-                包括创建投资事业群、投资经理、客户，以及按不同维度进行投资业绩汇总与分析、多客户批量交易、投资顾问佣金与提成设置、终端客户开户、交易、转账等全套财富管理功能。
-            </p>
-            <p>
-                <b>一账通全球交易：</b>
-                宽策略平台对接好中国券商，期货，海外投行，客户可在平台上实现一账户全球投资分析与交易。宽策略也可以根据使用者自身的风险偏好，资金大小，对未来的现金要求，生成智能全球资产配置组合，同时提供基于客户交易行为的机器学习，未来为客户做自动再平衡。
-            </p>
-        </div>
-    </section>
-    <footer class="footer">
+    <footer class="footer" style="background:#5D71E4 ">
         <div class="container">
             <div class="footleft col-md-7">
                 <ul class="clearfix">
@@ -103,28 +94,5 @@
         </div>
     </footer>
 </div>
-<script>
-    $(function(){
-        function getLeft(ele){
-            var win = $(window).width();
-            var left = win/2 - (ele.width()/2);
-            ele.css('left',left);
-        }
-        function setleft(){
-            getLeft($('.profile_text h2'));
-            getLeft($('.profile_img'));
-        }
-        $(window).resize(function(){
-            setleft();
-        });
-        setleft();
-        $('.profile_img').animate({
-            top: 250
-        });
-        $('.profile_text h2').animate({
-            top: 100
-        })
-    })
-</script>
 </body>
 </html>
